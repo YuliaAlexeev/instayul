@@ -1,0 +1,37 @@
+.main-header {
+  border-bottom: 1px solid $clr2;
+  height: 54px;
+  background-color: $clr3;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  @include for-max-normal-layout {
+    padding: 0 16px;
+  }
+  .header-logo {
+    height: 30px;
+  }
+  &-inner {
+    height: inherit;
+    svg {
+      margin-left: 20px;
+    }
+    &-nav {
+      line-height: 1;
+    }
+  }
+  &-search {
+    border: 1px solid $clr2;
+    background-color: $clr4;
+    padding: 4px;
+    width: 215px;
+    font-size: inherit;
+    border-radius: 3px;
+    &::placeholder {
+      font-size: 13px;
+    }
+    @include for-max-normal-layout {
+      display: none;
+    }
+  }
+}

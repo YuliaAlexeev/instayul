@@ -1,0 +1,106 @@
+.add-post {
+  &-content {
+    padding: 16px;
+    border-bottom: 1px solid $clr2;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    .theme-dark & {
+      border-color: $clr13;
+    }
+    .emoji-invoker svg {
+      width: 20px;
+      height: 20px;
+    }
+    .emoji-picker {
+      position: relative;
+    }
+    .letters-length {
+      color: $clr9;
+      font-size: 12px;
+    }
+    textarea {
+      grid-column: 1/-1;
+    }
+  }
+  &-modal {
+    width: 815px;
+    height: 83%;
+    border-radius: 12px;
+    animation: appear 350ms ease-in 1;
+    &-top {
+      border-bottom: 1px solid $clr2;
+      padding: 13px;
+      .theme-dark & {
+        border-color: $clr13;
+      }
+      &-title {
+        text-align: center;
+        flex-grow: 1;
+      }
+      * {
+        font-weight: 600;
+      }
+    }
+    .icon-image-upload {
+      width: 96px;
+      height: 76px;
+      margin-bottom: 18px;
+    }
+    &-reset-btn {
+      color: $clr7;
+      &:hover {
+        color: $clr10;
+      }
+    }
+    &-title {
+      padding: 16px;
+      font-weight: 600;
+    }
+    &-upload {
+      height: 100%;
+      overflow: hidden;
+      &-create {
+        flex-direction: column;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      }
+      &-img {
+        object-fit: contain;
+      }
+    }
+    &-location {
+      border-bottom: 1px solid $clr2;
+      .theme-dark & {
+        border-color: $clr13;
+      }
+      padding: 11px 16px;
+      input {
+        flex-grow: 1;
+      }
+      svg {
+        fill: currentColor;
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &-btn {
+      float: right;
+      color: $clr5;
+      font-weight: 600;
+      &:hover {
+        color: $clr10;
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

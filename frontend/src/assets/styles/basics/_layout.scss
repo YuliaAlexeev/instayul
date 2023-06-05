@@ -1,0 +1,80 @@
+#app {
+  height: 100%;
+}
+.main {
+  padding-top: 30px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 50px;
+  grid-template-columns: 1fr;
+  @include for-narrow-layout {
+    width: calc(100% - #{$main-sidebar-width-thin});
+    float: right;
+  }
+  @include for-wide-layout {
+    width: calc(100% - #{$main-sidebar-width});
+  }
+  @include for-max-normal-layout {
+    padding-top: 15px;
+  }
+  &-user-profile {
+    @include for-max-normal-layout {
+      display: none;
+    }
+  }
+  &-logo-title {
+    font-family: "Cookie", cursive;
+    font-size: 40px;
+    padding: 0 12px;
+  }
+  &-loader {
+    width: 100px;
+  }
+  .home-page {
+    justify-self: center;
+  }
+}
+
+/* For dark mode */
+.theme-dark {
+  background-color: $clr12;
+  color: $clr11;
+  a {
+    color: $clr11;
+  }
+  input,
+  textarea {
+    color: $clr3;
+  }
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: $clr13;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $clr8;
+    border: 3px solid $clr13;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: $clr9;
+  }
+  .main-sidebar {
+    background-color: inherit;
+  }
+  .pac-container {
+    background-color: $clr12;
+    color: $clr11;
+    border-color: $clr13;
+    .pac-item {
+      border-color: $clr13;
+      color: $clr6;
+      &:hover {
+        background-color: $clr14;
+      }
+      &-query {
+        color: $clr3;
+      }
+    }
+  }
+}

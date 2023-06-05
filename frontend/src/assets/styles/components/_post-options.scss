@@ -1,0 +1,23 @@
+.post-options {
+  font-size: 14px;
+  text-align: center;
+  &-btn {
+    padding: 16px 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid $clr2;
+      .theme-dark & {
+        border-bottom: 1px solid $clr13;
+      }
+    }
+    &.btn-remove {
+      font-weight: 600;
+      color: $clr7;
+    }
+    &:active {
+      background-color: $clr2;
+      .theme-dark & {
+        background-color: $clr1;
+      }
+    }
+  }
+}

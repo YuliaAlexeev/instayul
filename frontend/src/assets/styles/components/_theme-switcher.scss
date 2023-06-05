@@ -1,0 +1,60 @@
+.theme-switcher {
+  display: none;
+  @include for-wide-layout {
+    padding: 12px;
+  }
+  @include for-narrow-layout {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+  }
+  &-icon {
+    fill: currentColor;
+    width: 17px;
+    height: 17px;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 15px;
+    margin-left: 5px;
+    @include for-wide-layout {
+      margin-left: 12px;
+    }
+    input {
+      display: none;
+      &:focus + .slider {
+        box-shadow: 0 0 1px $clr1;
+      }
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $clr9;
+      transition: 0.2s;
+      border-radius: 7px;
+      &:before {
+        border-radius: 50%;
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        left: 1px;
+        bottom: 1px;
+        background-color: $clr3;
+        transition: 0.2s;
+      }
+    }
+    .checked + .slider {
+      background-color: $clr5;
+      &:before {
+        transform: translateX(12px);
+      }
+    }
+  }
+}

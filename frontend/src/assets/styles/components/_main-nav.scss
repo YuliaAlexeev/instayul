@@ -1,0 +1,49 @@
+.main-nav-list {
+  list-style-type: none;
+  padding: 0;
+  @include for-max-narrow-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+  }
+  &-item {
+    transition: all 0.2s ease-in-out;
+    @include for-wide-layout {
+      margin-bottom: 12px;
+    }
+    svg {
+      fill: currentColor;
+    }
+    &:hover {
+      border-radius: 8px;
+      @include for-narrow-layout {
+        background-color: $clr4;
+        .theme-dark & {
+          background-color: $clr14;
+        }
+      }
+      svg,
+      .main-header-user {
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.1);
+      }
+    }
+    &-title {
+      display: none;
+      @include for-wide-layout {
+        display: block;
+      }
+    }
+    &-nav {
+      padding: 12px;
+      .nav-icon {
+        width: 25px;
+        height: 25px;
+        @include for-wide-layout {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.main-sidebar {
+  position: fixed;
+  background-color: $clr3;
+  z-index: 20;
+  top: 0;
+  bottom: 0;
+  .main-logo {
+    display: none;
+  }
+  @include for-narrow-layout {
+    padding: 12px;
+    width: $main-sidebar-width-thin;
+    border-right: 1px solid $clr2;
+    .theme-dark & {
+      border-right: 1px solid $clr1;
+    }
+  }
+  @include for-wide-layout {
+    width: $main-sidebar-width;
+    .main-logo {
+      display: block;
+    }
+  }
+  @include for-max-narrow-layout {
+    border-top: 1px solid $clr2;
+    border-right: 0;
+    left: 0;
+    right: 0;
+    top: initial;
+    .theme-dark & {
+      background-color: $clr14 !important;
+      border-top: 0;
+    }
+  }
+}

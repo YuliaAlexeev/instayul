@@ -1,0 +1,11 @@
+.main-footer {
+  height: 50px;
+  text-align: center;
+  color: $clr6;
+  font-size: 12px;
+  margin-top: auto;
+  grid-row: 2/-1;
+  @include for-max-normal-layout {
+    padding-bottom: 100px;
+  }
+}

@@ -1,0 +1,60 @@
+.screen {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  &-close-btn {
+    position: absolute;
+    right: 27px;
+    top: 11px;
+  }
+  &-box {
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    &-top {
+      text-align: center;
+      border-bottom: 1px solid $clr2;
+      padding: 6px 18px;
+      position: relative;
+      button {
+        height: 18px;
+        width: 18px;
+      }
+      .theme-dark & {
+        border-color: $clr13;
+      }
+      &-title {
+        font-weight: 600;
+        font-size: 16px;
+        flex-grow: 1;
+      }
+    }
+    &-bottom {
+      padding: 16px;
+      overflow: hidden auto;
+      height: 350px;
+    }
+  }
+  &-row {
+    margin-bottom: 10px;
+    font-size: 14px;
+    &-name {
+      &-username {
+        font-weight: 600;
+      }
+      &-fullname {
+        color: $clr6;
+      }
+    }
+  }
+}
+
+.icon-close {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}

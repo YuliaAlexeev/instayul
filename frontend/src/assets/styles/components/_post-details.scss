@@ -1,0 +1,138 @@
+.post {
+  &-location {
+    grid-column: 1/-1;
+  }
+  &-list {
+    max-width: 470px;
+  }
+  &-details {
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $clr2;
+    .theme-dark & {
+      border-bottom: 1px solid $clr1;
+    }
+    &-header {
+      padding: 12px 4px 12px 4px;
+      line-height: 1.2;
+      .more-options-btn {
+        margin-left: auto;
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: currentColor;
+          &:hover {
+            fill: $clr8;
+          }
+        }
+      }
+      &-info {
+        display: grid;
+        grid-template-columns: min-content 17px auto;
+        grid-template-rows: 20px auto;
+        align-items: baseline;
+        margin-bottom: 4px;
+        a {
+          font-weight: 600;
+          &:active {
+            color: lighten(#555555, 20%);
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    &-img {
+      object-fit: cover;
+      border-radius: 3px;
+      @include for-max-normal-layout {
+        height: 350px;
+      }
+    }
+    .show-comments-btn {
+      color: $clr6;
+      display: block;
+      margin: 2px 0;
+      &:active {
+        color: lighten($clr6, 30%);
+      }
+    }
+    &-content {
+      @include for-max-narrow-layout {
+        padding: 0 16px;
+      }
+    }
+    &-add-comment {
+      margin-top: 5px;
+      position: relative;
+      textarea {
+        height: 21px;
+        overflow: hidden;
+        padding: 0;
+      }
+      @include for-max-narrow-layout {
+        padding: 0 16px;
+      }
+      &-btn {
+        color: $clr5;
+        font-weight: 600;
+        margin-right: 7px;
+        line-height: 1;
+        height: 20px;
+        &:hover {
+          color: $clr10;
+        }
+      }
+    }
+  }
+  &-actions {
+    padding-top: 12px;
+    &-btn:not(:first-of-type) {
+      margin-left: 15px;
+      &:last-of-type {
+        float: right;
+      }
+    }
+  }
+  &-row {
+    .show-full-content-btn {
+      color: $clr6;
+    }
+    &-username {
+      font-weight: 600;
+    }
+    &-remove-btn {
+      float: right;
+      padding-top: 4px;
+      svg {
+        fill: $clr6;
+        &:hover {
+          fill: $clr2;
+        }
+      }
+    }
+  }
+  &-likes {
+    &-btn {
+      font-weight: 600;
+      color: currentColor;
+      &:active {
+        color: $clr6;
+      }
+    }
+  }
+  &-published-time {
+    color: $clr6;
+    font-size: 10px;
+    text-transform: uppercase;
+    &-bullet {
+      font-size: 14px;
+      color: $clr6;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+}

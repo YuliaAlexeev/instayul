@@ -1,0 +1,129 @@
+.user-details {
+  margin: 0 auto 30px;
+  max-width: 935px;
+  width: 100%;
+}
+.profile {
+  padding: 0 60px;
+  @include for-max-normal-layout {
+    padding: 0 16px;
+  }
+  &-img {
+    width: 150px;
+    height: 150px;
+    margin-right: 12%;
+    object-fit: cover;
+    @include for-max-normal-layout {
+      margin-right: 16px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+  &-description {
+    font-size: 15px;
+    flex: 1;
+    &-top {
+      padding: 10px 0 15px;
+      &-username {
+        font-size: 25px;
+      }
+    }
+    &-bio {
+      padding-top: 14px;
+    }
+  }
+  &-count {
+    &:not(:first-child) {
+      margin-left: 30px;
+      @include for-max-normal-layout {
+        margin-left: 15px;
+      }
+    }
+    &-num {
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+  &-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    @include for-max-normal-layout {
+      grid-gap: 2px;
+    }
+    &-no-posts {
+      text-transform: capitalize;
+      grid-column: 1 / span 3;
+      padding-top: 60px;
+      font-size: 24px;
+      &-icon {
+        border: 2px solid;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        svg {
+          width: 24px;
+          fill: currentColor;
+        }
+      }
+    }
+    &-item {
+      cursor: pointer;
+      @include aspect-ratio(100, 100);
+      &-count {
+        display: none;
+        &-icon-heart {
+          fill: $clr3;
+        }
+        &-icon-comment {
+          stroke: $clr3;
+        }
+        span:first-child {
+          margin-right: 25px;
+        }
+      }
+      &:hover .profile-posts-item-count {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: $clr3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 600;
+        svg {
+          vertical-align: text-bottom;
+          width: 19px;
+          height: 19px;
+        }
+      }
+    }
+  }
+  &-tabs {
+    text-align: center;
+    border-top: 1px solid $clr2;
+    margin-top: 44px;
+    padding: 12px 0;
+    color: $clr6;
+    display: grid;
+    place-content: center;
+    .theme-dark & {
+      border-color: $clr1;
+    }
+    &-tab {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+      grid-gap: 5px;
+      svg {
+        fill: $clr6;
+        vertical-align: text-top;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

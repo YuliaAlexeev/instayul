@@ -1,0 +1,25 @@
+.post-actions-btn {
+  svg {
+    width: 25px;
+    height: 24px;
+    fill: currentColor;
+    stroke: currentColor;
+    &:hover {
+      fill: $clr8;
+      stroke: $clr8;
+    }
+  }
+  .like {
+    &.likeAnimation {
+      fill: $clr7;
+      stroke: $clr7;
+      animation: likeAnim 1s;
+    }
+  }
+}
+
+@keyframes likeAnim {
+  to {
+    transform: scale(1.3);
+  }
+}

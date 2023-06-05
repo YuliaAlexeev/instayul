@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkinstayul"]=self["webpackChunkinstayul"]||[]).push([[130],{6130:function(t,s,e){e.r(s),e.d(s,{default:function(){return l}});var o=function(){var t=this,s=t._self._c;return s("section",{staticClass:"user-details"})},n=[],r={computed:{isLoading(){return this.$store.getters.isLoading},postsToShow(){return this.$store.getters.getPosts}},methods:{loadPosts(){this.$store.dispatch({type:"loadPosts"})}},created(){this.loadPosts()}},i=r,u=e(1001),a=(0,u.Z)(i,o,n,!1,null,null,null),l=a.exports}}]);
+//# sourceMappingURL=130.4fd55c7f.js.map
