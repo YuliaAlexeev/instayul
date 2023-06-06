@@ -19,7 +19,7 @@
         "mongodb": "^3.2.7",
         "socket.io": "^2.2.0"
     },
-    "devDependencies": { 
-        "nodemon": "1.18.10"
+    "devDependencies": {
+        "nodemon": "^2.0.22"
     }
 }
