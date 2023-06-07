@@ -53,6 +53,6 @@ app.get("/**", (req, res) => {
 
 const logger = require("./services/logger.service");
 const port = process.env.PORT || 3050;
-http.listen(port, () => {
+http.listen(port, "0.0.0.0", () => {
   logger.info("Server is running on port: " + port);
 });
