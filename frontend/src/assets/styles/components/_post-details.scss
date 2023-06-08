@@ -106,11 +106,12 @@
     }
     &-remove-btn {
       float: right;
-      padding-top: 4px;
-      svg {
-        fill: $clr6;
+      .icon-remove {
+        stroke: $clr6;
+        width: 9px;
+        height: 9px;
         &:hover {
-          fill: $clr2;
+          stroke: $clr2;
         }
       }
     }
