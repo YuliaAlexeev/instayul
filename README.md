@@ -1,5 +1,5 @@
 # Instayul
-[https://instayul.onrender.com](https://instayul.onrender.com){:target="_blank"}
+[https://instayul.onrender.com](https://instayul.onrender.com)
 
 This is an Instagram clone project built using Vue.js, Vuex, CSS, HTML, Node.js with Express, MongoDB, and the Google Maps API. The project aims to replicate the core features of the popular social media platform.
 
