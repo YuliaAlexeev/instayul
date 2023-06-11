@@ -10,6 +10,11 @@
     position: absolute;
     right: 27px;
     top: 11px;
+    &-icon {
+      width: 18px;
+      height: 18px;
+      stroke: $clr3;
+    }
   }
   &-box {
     width: 400px;
@@ -20,9 +25,14 @@
       border-bottom: 1px solid $clr2;
       padding: 6px 18px;
       position: relative;
-      button {
+      &-button {
         height: 18px;
         width: 18px;
+        &-icon {
+          width: inherit;
+          height: inherit;
+          stroke: currentColor;
+        }
       }
       .theme-dark & {
         border-color: $clr13;
@@ -51,10 +61,4 @@
       }
     }
   }
-}
-
-.icon-close {
-  width: 18px;
-  height: 18px;
-  stroke: currentColor;
 }

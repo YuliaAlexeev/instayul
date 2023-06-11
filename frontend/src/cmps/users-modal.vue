@@ -3,8 +3,8 @@
     <div class="screen-box modal">
       <div class="screen-box-top flex flex-between flex-align-center">
         <slot name="title"></slot>
-        <button @click="closeModal">
-          <svg class="icon-close">
+        <button class="screen-box-top-button" @click="closeModal">
+          <svg class="screen-box-top-button-icon">
             <use xlink:href="../assets/sprite.svg#close"></use>
           </svg>
         </button>
