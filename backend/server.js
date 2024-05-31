@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "production") {
       "http://127.0.0.1:8080",
       "http://localhost:8080",
       "http://127.0.0.1:3000",
-      "http://localhost:3000",
+      "http://localhost:3050",
     ],
     credentials: true,
   };
@@ -53,6 +53,6 @@ app.get("/**", (req, res) => {
 
 const logger = require("./services/logger.service");
 const port = process.env.PORT || 3050;
-http.listen(port, "0.0.0.0", () => {
+http.listen(port, () => {
   logger.info("Server is running on port: " + port);
 });

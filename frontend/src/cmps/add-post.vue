@@ -32,7 +32,8 @@
             </svg>
             <h3>Click here to add image</h3>
           </label>
-          <input type="file" id="imgUploader" name="img-uploader" @change="onUploadImg" />
+          <input type="file" id="imgUploader" accept="image/jpeg, image/png, image/gif" name="img-uploader"
+            @change="onUploadImg" />
         </template>
         <img :src="postToAdd.imgUrl" v-if="postToAdd.imgUrl" class="add-post-modal-upload-img" />
       </div>

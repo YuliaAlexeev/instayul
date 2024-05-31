@@ -17,7 +17,7 @@
     position: relative;
     display: inline-block;
     width: 28px;
-    height: 15px;
+    height: 16px;
     margin-left: 5px;
     @include for-wide-layout {
       margin-left: 12px;
@@ -37,15 +37,15 @@
       bottom: 0;
       background-color: $clr9;
       transition: 0.2s;
-      border-radius: 7px;
+      border-radius: 10px;
       &:before {
         border-radius: 50%;
         position: absolute;
         content: "";
-        height: 13px;
-        width: 13px;
-        left: 1px;
-        bottom: 1px;
+        height: 12px;
+        width: 12px;
+        left: 2px;
+        bottom: 2px;
         background-color: $clr3;
         transition: 0.2s;
       }

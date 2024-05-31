@@ -37,6 +37,9 @@
     }
     &-nav {
       padding: 12px;
+      &.router-link-exact-active {
+        font-weight: bold;
+      }
       .nav-icon {
         width: 25px;
         height: 25px;
